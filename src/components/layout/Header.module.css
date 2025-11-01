@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 100px;
+}
+
+.brand {
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.woodLeafs {
+  position: absolute;
+  left: 25%;
+  object-fit: cover;
+}
+
+.woodLeafs:hover {
+  filter: brightness(4);
+}

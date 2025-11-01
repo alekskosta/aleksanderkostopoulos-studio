@@ -1,0 +1,56 @@
+.footer {
+  position: relative;
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.footerText {
+  text-align: center;
+}
+
+.footerFlowerRight {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  border-left: 0.5px solid white;
+  object-fit: cover;
+  animation: flowerShimmer 6s ease-in-out infinite;
+  will-change: filter, transform;
+}
+
+.footerFlowerLeft {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  transform: scaleX(-1);
+  border-left: 0.5px solid white;
+  object-fit: cover;
+  animation: flowerShimmer 6s ease-in-out infinite;
+  will-change: filter, transform;
+}
+
+.icons {
+  margin-block: 0.4rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@keyframes flowerShimmer {
+  0%,
+  100% {
+    filter: brightness(1.2) saturate(1);
+  }
+  50% {
+    filter: brightness(2.1) saturate(1.12);
+  }
+}

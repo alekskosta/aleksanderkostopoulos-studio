@@ -6,6 +6,54 @@
   box-sizing: border-box;
 }
 
+@keyframes growAndFade {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 10;
+    transform: translate(-100%, -10%);
+  }
+  to {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0;
+    opacity: 0;
+    transform: translate(-10%, -90%);
+    border-color: blue;
+  }
+}
+
+.mouse-trail-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.mouse-trail-circle {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: currentColor;
+  color: rgba(255, 255, 255, 0.7);
+
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+  animation: particle 2000ms ease-out forwards;
+}
+@keyframes particle {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    color: purple;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+    color: white;
+  }
+}
+
 html {
   font-size: 18px;
   line-height: 32px;
@@ -38,6 +86,33 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.mainNav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.navLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  text-decoration: none;
 }
 
 h1 {
@@ -161,4 +236,33 @@ svg {
       border-radius: 4px;
     }
   }
+}
+
+.ambient-audio {
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  z-index: 50;
+}
+
+.ambient-toggle {
+  padding: 0.4rem 0.7rem;
+  border: 0.5px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.ambient-vol input[type='range'] {
+  width: 120px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

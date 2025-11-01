@@ -1,0 +1,95 @@
+.heroSection {
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+.heroImage > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  filter: brightness(1.5);
+}
+
+.middleHeroText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  border-right: 0.5px solid white;
+  border-left: 0.5px solid white;
+  padding: 0 1.25rem;
+}
+
+.rightHeroText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 1.25rem;
+}
+
+.rightHeroText > h2 {
+  font-size: 1.4rem;
+}
+
+.small {
+  max-width: 200px;
+  line-height: 1;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.crystal {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  filter: brightness(0.8);
+}
+
+.flower:hover,
+.crystal:hover {
+  filter: brightness(4);
+}
+
+.flower {
+  position: absolute;
+  bottom: 20%;
+  height: 50%;
+  object-fit: cover;
+
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+
+  animation: flowerShimmer 6s ease-in-out infinite;
+  will-change: filter, transform;
+}
+
+@keyframes flowerShimmer {
+  0%,
+  100% {
+    filter: brightness(1.2) saturate(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.7) saturate(1.12);
+    transform: scale(1.03);
+  }
+}
