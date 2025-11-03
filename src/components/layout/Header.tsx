@@ -32,6 +32,16 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link
+              href="https://github.com/alekskosta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navLink"
+            >
+              Github
+            </Link>
+          </li>
+          <li>
             <Link href="/blogg" className="navLink">
               Contact
             </Link>

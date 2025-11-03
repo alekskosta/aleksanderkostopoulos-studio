@@ -7,7 +7,7 @@ export default function AboutSection() {
       <h1 className={styles.aboutTitle}>About</h1>
       <article className={styles.aboutArticle}>
         <Image
-          src="/images/heroImage.jpg"
+          src="/images/aboutImage.jpg"
           alt="Aleksander Kostopoulos"
           width={600}
           height={600}
