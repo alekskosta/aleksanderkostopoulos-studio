@@ -118,7 +118,7 @@ export default function Footer() {
           </ul>
         </nav>
         <small>Aleksander Kostopoulos</small>
-        <hr />
+        <hr className={styles.line} />
         <small>© All rights reserved 2025</small>
       </article>
     </footer>

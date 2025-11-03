@@ -17,7 +17,7 @@ export default function Header() {
       <nav aria-label="Hovedmeny">
         <ul className="mainNav">
           <li>
-            <Link href="/blogg" className="navLink">
+            <Link href="/about" className="navLink">
               About
             </Link>
           </li>

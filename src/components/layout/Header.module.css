@@ -24,3 +24,10 @@
 .woodLeafs:hover {
   filter: brightness(4);
 }
+
+@media (max-width: 950px) {
+  .woodLeafs {
+    left: 10%;
+    width: 50%;
+  }
+}

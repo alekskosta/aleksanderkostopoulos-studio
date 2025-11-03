@@ -6,7 +6,11 @@
 }
 
 .footerText {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
 }
 
 .footerFlowerRight {
@@ -14,10 +18,10 @@
   right: 0;
   height: 100%;
   width: 25%;
-  border-left: 0.5px solid white;
   object-fit: cover;
   animation: flowerShimmer 6s ease-in-out infinite;
   will-change: filter, transform;
+  border-left: 0.5px solid white;
 }
 
 .footerFlowerLeft {
@@ -26,10 +30,10 @@
   height: 100%;
   width: 25%;
   transform: scaleX(-1);
-  border-left: 0.5px solid white;
   object-fit: cover;
   animation: flowerShimmer 6s ease-in-out infinite;
   will-change: filter, transform;
+  border-left: 0.5px solid white;
 }
 
 .icons {
@@ -45,6 +49,10 @@
   cursor: pointer;
 }
 
+.line {
+  width: 50%;
+}
+
 @keyframes flowerShimmer {
   0%,
   100% {
@@ -52,5 +60,12 @@
   }
   50% {
     filter: brightness(2.1) saturate(1.12);
+  }
+}
+
+@media (max-width: 950px) {
+  .footerFlowerRight,
+  .footerFlowerLeft {
+    width: 15%;
   }
 }
