@@ -21,6 +21,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   align-items: start;
+  width: 100%;
 }
 
 .labArticle {
@@ -31,4 +32,11 @@
 .labArticle > img {
   aspect-ratio: 4/3;
   object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  filter: brightness(1.2);
 }
