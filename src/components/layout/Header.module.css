@@ -15,6 +15,10 @@
   font-weight: 600;
 }
 
+.brand:hover {
+  color: #9b005c;
+}
+
 .woodLeafs {
   position: absolute;
   left: 25%;

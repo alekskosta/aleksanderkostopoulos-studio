@@ -49,6 +49,14 @@
   cursor: pointer;
 }
 
+.footerLink {
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #9b005c;
+}
+
 .line {
   width: 50%;
 }

@@ -32,10 +32,13 @@ export default async function Lab() {
               />
             ) : null}
 
-            <h2>{lab.title}</h2>
+            <h2 className={styles.titleArticle}>{lab.title}</h2>
+
+            <p>{lab.intro}</p>
 
             {lab.createdAt && (
-              <time dateTime={lab.createdAt}>
+              <time dateTime={lab.createdAt} className={styles.timeArticle}>
+                Posted on{' '}
                 {new Date(lab.createdAt).toLocaleDateString('nb-NO', {
                   dateStyle: 'medium',
                   timeZone: 'Europe/Oslo',
@@ -43,8 +46,9 @@ export default async function Lab() {
               </time>
             )}
 
-            <p>{lab.intro}</p>
-            <Link href={`/lab/${lab.slug}`}>Read More</Link>
+            <Link href={`/lab/${lab.slug}`} className={styles.btnArticle}>
+              READ MORE
+            </Link>
           </article>
         ))}
       </div>

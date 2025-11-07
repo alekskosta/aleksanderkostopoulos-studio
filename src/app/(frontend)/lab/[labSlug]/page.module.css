@@ -1,4 +1,4 @@
-.about {
+.labSlugSection {
   border-bottom: 0.5px solid white;
   width: 100%;
   min-height: 100vh;
@@ -6,12 +6,16 @@
   place-items: center;
 }
 
-.aboutTitle {
+.labSlugTitle {
   text-align: center;
   padding: 2.5rem;
 }
 
-.aboutArticle {
+.labSlugLink:hover {
+  color: #9b005c;
+}
+
+.labSlugArticle {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,14 +25,7 @@
   border-right: 0.5px solid white;
 }
 
-.aboutText {
-  flex: 1 1 50%;
-  padding-bottom: 2.5rem;
-  padding-inline: 2.5rem;
-  border-left: 0.5px solid white;
-}
-
-.aboutImage {
+.labSlugImage {
   flex: 1 1 50%;
   padding-bottom: 2.5rem;
   padding-inline: 2.5rem;
@@ -42,8 +39,15 @@
   object-fit: cover;
 }
 
+.labSlugText {
+  flex: 1 1 50%;
+  padding-bottom: 2.5rem;
+  padding-inline: 2.5rem;
+  border-left: 0.5px solid white;
+}
+
 @media (max-width: 950px) {
-  .aboutArticle {
+  .labSlugArticle {
     flex-direction: column;
   }
 }

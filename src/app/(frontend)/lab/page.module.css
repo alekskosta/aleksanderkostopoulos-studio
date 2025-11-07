@@ -11,6 +11,12 @@
   text-align: center;
 }
 
+.titleArticle {
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
+}
+
 .labText {
   max-width: 800px;
   padding-bottom: 1.25rem;
@@ -18,10 +24,18 @@
 
 .labGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-rows: 1fr;
   gap: 1rem;
   align-items: start;
   width: 100%;
+
+  article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    row-gap: 0.5rem;
+  }
 }
 
 .labArticle {
@@ -39,4 +53,25 @@
   -webkit-mask-size: 10% 90%;
   mask-size: 90% 100%;
   filter: brightness(1.2);
+}
+
+.btnArticle {
+  border: 0.5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btnArticle:hover {
+  background-color: #9b005c;
+}
+
+.timeArticle {
+  font-size: 0.8rem;
+  opacity: 0.6;
 }

@@ -45,7 +45,7 @@
   from {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    color: purple;
+    color: #9b005c;
   }
   to {
     opacity: 0;
@@ -108,6 +108,7 @@ img {
 
 .navLink:hover {
   text-decoration: underline;
+  color: #9b005c;
 }
 
 .navLink:focus-visible {
