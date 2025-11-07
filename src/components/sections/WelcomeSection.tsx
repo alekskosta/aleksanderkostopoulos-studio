@@ -16,7 +16,12 @@ export default function WelcomeSection() {
           light, and code. With a background as a drummer and composer, my work blends rhythm,
           movement, and technology into immersive live experiences, websites and installations. You
           can explore more of my musical work at{' '}
-          <Link href="https://aleksanderkostopoulos.com" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://aleksanderkostopoulos.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.welcomeLink}
+          >
             aleksanderkostopoulos.com
           </Link>
         </p>

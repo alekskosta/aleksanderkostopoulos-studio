@@ -126,7 +126,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/blogg" className="navLink">
+              <Link href="/contact" className="navLink">
                 Contact
               </Link>
             </li>

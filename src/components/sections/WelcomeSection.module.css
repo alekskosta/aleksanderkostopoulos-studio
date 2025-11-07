@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.welcomeLink:hover {
+  color: #9b005c;
+}
+
 .rock {
   position: absolute;
   bottom: 0;
