@@ -25,6 +25,7 @@ export default async function Lab() {
           <article key={lab.id} className={styles.labArticle}>
             {typeof lab.photo !== 'number' && lab.photo?.url ? (
               <Image
+                className={styles.labImage}
                 src={lab.photo.url}
                 alt={lab.photo.alt ?? lab.title}
                 width={lab.photo.width ?? 1200}
