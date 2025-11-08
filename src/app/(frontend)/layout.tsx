@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import MouseTrail from '@/components/effects/MouseTrail'
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',

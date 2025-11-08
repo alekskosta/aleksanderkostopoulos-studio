@@ -34,6 +34,7 @@
   animation: flowerShimmer 6s ease-in-out infinite;
   will-change: filter, transform;
   border-left: 0.5px solid white;
+  filter: brightness(0.5);
 }
 
 .icons {
@@ -51,6 +52,9 @@
 
 .footerLink {
   text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
 }
 
 .footerLink:hover {

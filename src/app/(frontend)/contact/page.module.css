@@ -6,9 +6,41 @@
   place-items: center;
 }
 
+.crystalThreeLeft {
+  position: absolute;
+  left: 0;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crystalThreeRight {
+  position: absolute;
+  right: 0;
+  transform: scaleX(-1);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .aboutTitle {
   text-align: center;
   padding: 2.5rem;
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
 }
 
 .aboutArticle {
@@ -23,10 +55,12 @@
 }
 
 .aboutText {
+  position: relative;
+  z-index: 10;
   flex: 1 1 50%;
-  padding-bottom: 2.5rem;
-  padding-inline: 2.5rem;
+  padding: 2.5rem;
   border-bottom: 0.5px solid white;
+  border-top: 0.5px solid white;
   max-width: 550px;
   text-align: center;
 }
@@ -49,7 +83,7 @@
   font-weight: bold;
   display: block;
   text-decoration: none;
-  padding: 2.5rem;
+  padding-top: 2.5rem;
 }
 
 .contactLink:hover {

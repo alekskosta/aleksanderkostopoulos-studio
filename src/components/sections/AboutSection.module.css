@@ -9,6 +9,9 @@
 .aboutTitle {
   text-align: center;
   padding: 2.5rem;
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
 }
 
 .aboutArticle {
