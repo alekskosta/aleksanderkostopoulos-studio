@@ -22,7 +22,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/blogg" className="navLink">
+            <Link href="/#projectSection" className="navLink">
               Projects
             </Link>
           </li>

@@ -15,7 +15,7 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 10% 90%;
   mask-size: 90% 100%;
-  width: 20%;
+  width: 10%;
   height: 100%;
   object-fit: cover;
 }
@@ -30,7 +30,7 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 10% 90%;
   mask-size: 90% 100%;
-  width: 20%;
+  width: 10%;
   height: 100%;
   object-fit: cover;
 }

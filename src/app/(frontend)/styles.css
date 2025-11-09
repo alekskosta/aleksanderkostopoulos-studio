@@ -268,3 +268,168 @@ svg {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+.projectSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  align-items: start;
+  width: 100%;
+  padding-inline: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 0.5px solid white;
+
+  article {
+    /*display: grid;
+    place-content: center;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    row-gap: 0.3rem;*/
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0px 5px 15px white;
+  }
+}
+.projImage {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  border-right: 0.5px solid white;
+}
+
+.projText {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.projectSectionImage {
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  filter: brightness(1.4);
+}
+
+.projectSectionBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projectBtn {
+  border: 0.5px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.projectBtn:hover {
+  background-color: #9b005c;
+}
+
+.projectsTitle {
+  padding: 2.5rem;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
+}
+
+.projTitle {
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.woodThree {
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  left: 0;
+  opacity: 0.4;
+  top: 0;
+  width: 10%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+}
+
+.woodThree2 {
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  right: 0;
+  opacity: 0.5;
+  top: 0;
+  width: 4%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+}
+
+.pinkLeafs {
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  right: 50%;
+  opacity: 0.4;
+  top: 0;
+  width: 15%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+}
+
+.leaf {
+  position: absolute;
+  z-index: -2;
+  height: 10%;
+  right: 20.5%;
+  opacity: 0.4;
+  top: 5%;
+  width: 10%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+  filter: brightness(1.4);
+}

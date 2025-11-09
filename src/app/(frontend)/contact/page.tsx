@@ -6,12 +6,12 @@ export default function ContactSection() {
   return (
     <section className={styles.about}>
       <img
-        src="/images/transparent_WoodThree.png"
+        src="/images/transparent_woodThree.png"
         alt="Shimmering flower"
         className={styles.crystalThreeLeft}
       />
       <img
-        src="/images/transparent_WoodThree.png"
+        src="/images/transparent_woodThree.png"
         alt="Shimmering flower"
         className={styles.crystalThreeRight}
       />
