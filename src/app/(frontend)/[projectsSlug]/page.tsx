@@ -20,6 +20,7 @@ export default async function labPost({ params }: PageParams) {
         equals: projectsSlug,
       },
     },
+    depth: 1,
   })
 
   const lab = queryResult.docs[0]
