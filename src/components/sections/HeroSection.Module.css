@@ -22,7 +22,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-
   border-right: 0.5px solid white;
   border-left: 0.5px solid white;
   padding: 0 1.25rem;
@@ -51,12 +50,6 @@
   position: absolute;
   bottom: 0;
   width: 80%;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 10% 90%;
-  mask-size: 90% 100%;
   filter: brightness(0.8);
 }
 
@@ -70,16 +63,18 @@
   bottom: 20%;
   height: 50%;
   object-fit: cover;
+  animation: flowerShimmer 6s ease-in-out infinite;
+  will-change: filter, transform;
+}
 
+.crystal,
+.flower {
   -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
   mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 10% 90%;
   mask-size: 90% 100%;
-
-  animation: flowerShimmer 6s ease-in-out infinite;
-  will-change: filter, transform;
 }
 
 @keyframes flowerShimmer {

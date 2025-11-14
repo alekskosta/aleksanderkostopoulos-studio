@@ -98,7 +98,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <nav aria-label="Hovedmeny">
+        <nav aria-label="Footermeny">
           <ul className="mainNav">
             <li>
               <Link href="/about" className="navLink">

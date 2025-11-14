@@ -4,6 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
 
+export const metadata = {
+  title: 'Lab – Aleksander Kostopoulos',
+  description:
+    'Lab is a playground for audiovisual and creative coding experiments by Aleksander Kostopoulos – from TouchDesigner patches to React components.',
+}
+
 export default async function Lab() {
   const payload = await getPayload({ config })
   const queryResult = await payload.find({

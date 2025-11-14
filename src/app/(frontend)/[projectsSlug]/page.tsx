@@ -9,7 +9,7 @@ type PageParams = {
   params: Promise<{ projectsSlug: string }>
 }
 
-export default async function labPost({ params }: PageParams) {
+export default async function ProjectPost({ params }: PageParams) {
   const { projectsSlug } = await params
   const payload = await getPayload({ config })
 
@@ -23,26 +23,30 @@ export default async function labPost({ params }: PageParams) {
     depth: 1,
   })
 
-  const lab = queryResult.docs[0]
+  const proj = queryResult.docs[0]
 
   return (
-    <section className={styles.labSlugSection}>
-      <h1 className={styles.labSlugTitle}>{lab.title}</h1>
-      <Link href="/#projectSection" aria-label="Back to projects" className={styles.labSlugLink}>
+    <section className={styles.projectSlugSection}>
+      <h1 className={styles.projectSlugTitle}>{proj.title}</h1>
+      <Link
+        href="/#projectSection"
+        aria-label="Back to projects"
+        className={styles.projectSlugLink}
+      >
         ← Back to projects
       </Link>
-      <article className={styles.labSlugArticle}>
-        {typeof lab.photo !== 'number' && lab.photo?.url ? (
+      <article className={styles.projectSlugArticle}>
+        {typeof proj.photo !== 'number' && proj.photo?.url ? (
           <Image
-            className={styles.labSlugImage}
-            src={lab.photo.url}
-            alt={lab.photo.alt ?? lab.title}
-            width={lab.photo.width ?? 1200}
-            height={lab.photo.height ?? 675}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 600px"
+            className={styles.projectSlugImage}
+            src={proj.photo.url}
+            alt={proj.photo.alt ?? proj.title}
+            width={proj.photo.width ?? 1200}
+            height={proj.photo.height ?? 675}
+            priority
           />
         ) : null}
-        <RichText data={lab.content} className={styles.labSlugText} />
+        <RichText data={proj.content} className={styles.projectSlugText} />
       </article>
     </section>
   )

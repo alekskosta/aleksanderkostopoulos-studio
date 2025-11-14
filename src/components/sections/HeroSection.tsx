@@ -2,10 +2,10 @@ import Image from 'next/image'
 import styles from './HeroSection.module.css'
 import MouseTrail from '../effects/MouseTrail'
 import AmbientAudio from '../Audio/AmbientAudio'
-import type { Hero as HeroGlobal, Photo } from '@/payload-types'
+import type { Hero, Photo } from '@/payload-types'
 
 type HeroSectionProps = {
-  hero: HeroGlobal
+  hero: Hero
 }
 
 export default function HeroSection({ hero }: HeroSectionProps) {
@@ -23,7 +23,6 @@ export default function HeroSection({ hero }: HeroSectionProps) {
               alt={image.alt}
               priority
               className={styles.image}
-              sizes="100vw"
               width={widescreen.width ?? 1345}
               height={widescreen.height ?? 2048}
             />
@@ -33,7 +32,6 @@ export default function HeroSection({ hero }: HeroSectionProps) {
               alt="Aleksander Kostopoulos"
               priority
               className={styles.image}
-              sizes="100vw"
               width={1345}
               height={2048}
             />
@@ -48,11 +46,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
             artist="Aleksander Kostopoulos"
           />
 
-          <img
-            src="/images/transparent_crystal.png"
-            alt="Shimmering flower"
-            className={styles.crystal}
-          />
+          <img src="/images/transparent_crystal.png" alt="" className={styles.crystal} />
 
           <small className={styles.small}>
             Drift and hover the images to join the installation
@@ -61,7 +55,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
 
         <div className={styles.rightHeroText}>
           <h2>{hero.subtitle}</h2>
-          <img src="/images/transparent_flower.png" className={styles.flower} />
+          <img src="/images/transparent_flower.png" alt="" className={styles.flower} />
         </div>
       </section>
       <MouseTrail />

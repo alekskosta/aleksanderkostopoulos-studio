@@ -9,7 +9,7 @@ type PageParams = {
   params: Promise<{ labSlug: string }>
 }
 
-export default async function labPost({ params }: PageParams) {
+export default async function LabPost({ params }: PageParams) {
   const { labSlug } = await params
   const payload = await getPayload({ config })
 

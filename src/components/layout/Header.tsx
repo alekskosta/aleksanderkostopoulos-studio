@@ -4,11 +4,7 @@ import styles from './Header.module.css'
 export default function Header() {
   return (
     <header className={styles.header}>
-      <img
-        src="/images/transparent_leafs.png"
-        alt="Shimmering flower"
-        className={styles.woodLeafs}
-      />
+      <img src="/images/transparent_leafs.png" alt="" className={styles.woodLeafs} />
       <p>
         <Link href="/" className={styles.brand}>
           Aleksander Kostopoulos

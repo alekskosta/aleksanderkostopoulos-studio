@@ -16,7 +16,7 @@ export default function AboutSection() {
           width={600}
           height={600}
           className={styles.aboutImage}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 600px"
+          priority
         />
         <div className={styles.aboutText}>
           Aleksander Kostopoulos is a creative technologist, drummer and audiovisual composer
