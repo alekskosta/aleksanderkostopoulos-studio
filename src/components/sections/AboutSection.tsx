@@ -1,10 +1,14 @@
 import Image from 'next/image'
 import styles from './AboutSection.module.css'
+import Link from 'next/link'
 
 export default function AboutSection() {
   return (
     <section className={styles.about}>
       <h1 className={styles.aboutTitle}>About</h1>
+      <Link href="/" aria-label="Back to home" className={styles.aboutSlugLink}>
+        ← Home
+      </Link>
       <article className={styles.aboutArticle}>
         <Image
           src="/images/aboutImage.jpg"

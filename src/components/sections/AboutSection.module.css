@@ -45,6 +45,10 @@
   object-fit: cover;
 }
 
+.aboutSlugLink:hover {
+  color: #9b005c;
+}
+
 @media (max-width: 950px) {
   .aboutArticle {
     flex-direction: column;

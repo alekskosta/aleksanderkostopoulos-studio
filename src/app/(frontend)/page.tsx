@@ -10,14 +10,16 @@ import Link from 'next/link'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
+  const hero = await payload.findGlobal({ slug: 'hero', depth: 1 })
   const queryResult = await payload.find({
     collection: 'projects',
   })
 
   const projects = queryResult.docs
+
   return (
     <>
-      <HeroSection />
+      <HeroSection hero={hero} />
       <WelcomeSection />
 
       <section id="projectSection">

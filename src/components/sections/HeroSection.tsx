@@ -2,25 +2,46 @@ import Image from 'next/image'
 import styles from './HeroSection.module.css'
 import MouseTrail from '../effects/MouseTrail'
 import AmbientAudio from '../Audio/AmbientAudio'
+import type { Hero as HeroGlobal, Photo } from '@/payload-types'
 
-export default function HeroSection() {
+type HeroSectionProps = {
+  hero: HeroGlobal
+}
+
+export default function HeroSection({ hero }: HeroSectionProps) {
+  const image = hero.image && typeof hero.image === 'object' ? (hero.image as Photo) : null
+  const widescreen = image?.sizes?.widescreen
+  const widescreenUrl = widescreen?.url ?? null
+
   return (
     <>
       <section className={styles.heroSection}>
         <div className={styles.heroImage}>
-          <Image
-            src="/images/heroImage.jpg"
-            alt="Aleksander Kostopoulos"
-            priority
-            className={styles.image}
-            sizes="100vw"
-            width={1345}
-            height={2048}
-          />
+          {image && widescreen && widescreenUrl ? (
+            <Image
+              src={widescreenUrl}
+              alt={image.alt}
+              priority
+              className={styles.image}
+              sizes="100vw"
+              width={widescreen.width ?? 1345}
+              height={widescreen.height ?? 2048}
+            />
+          ) : (
+            <Image
+              src="/images/aboutImage.jpg"
+              alt="Aleksander Kostopoulos"
+              priority
+              className={styles.image}
+              sizes="100vw"
+              width={1345}
+              height={2048}
+            />
+          )}
         </div>
 
         <div className={styles.middleHeroText}>
-          <h1 className={styles.heroTitle}>Creative Technologist & Audiovisual Artist </h1>
+          <h1 className={styles.heroTitle}>{hero.title}</h1>
           <AmbientAudio
             src="/audio/audiovisualSite.mp3"
             title="Klangre Atmos"
@@ -34,12 +55,12 @@ export default function HeroSection() {
           />
 
           <small className={styles.small}>
-            Click and hover the images to join the installation
+            Drift and hover the images to join the installation
           </small>
         </div>
 
         <div className={styles.rightHeroText}>
-          <h2>Drummer, Composer & Frontend Developer</h2>
+          <h2>{hero.subtitle}</h2>
           <img src="/images/transparent_flower.png" className={styles.flower} />
         </div>
       </section>
