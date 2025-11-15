@@ -314,3 +314,9 @@ svg {
   width: 10%;
   filter: brightness(1.4);
 }
+
+@media (max-width: 900px) {
+  .mainNav {
+    display: none;
+  }
+}
