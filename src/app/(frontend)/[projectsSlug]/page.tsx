@@ -4,6 +4,7 @@ import { RichText } from '@payloadcms/richtext-lexical/react'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 type PageParams = {
   params: Promise<{ projectsSlug: string }>
@@ -24,6 +25,11 @@ export default async function ProjectPost({ params }: PageParams) {
   })
 
   const proj = queryResult.docs[0]
+
+  if (!proj) {
+    console.error('Fant ingen project for slug:', projectsSlug)
+    notFound()
+  }
 
   return (
     <section className={styles.projectSlugSection}>

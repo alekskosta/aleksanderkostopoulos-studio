@@ -4,6 +4,7 @@ import { RichText } from '@payloadcms/richtext-lexical/react'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 type PageParams = {
   params: Promise<{ labSlug: string }>
@@ -23,6 +24,11 @@ export default async function LabPost({ params }: PageParams) {
   })
 
   const lab = queryResult.docs[0]
+
+  if (!lab) {
+    console.error('Fant ingen project for slug:', labSlug)
+    notFound()
+  }
 
   return (
     <section className={styles.labSlugSection}>
