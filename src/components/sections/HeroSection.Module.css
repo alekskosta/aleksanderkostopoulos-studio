@@ -88,3 +88,17 @@
     transform: scale(1.03);
   }
 }
+
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+
+    height: auto;
+  }
+
+  .flower {
+    top: 0;
+    right: 0;
+    height: 50%;
+  }
+}
