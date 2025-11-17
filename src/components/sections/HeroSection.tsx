@@ -54,7 +54,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
         </div>
 
         <div className={styles.rightHeroText}>
-          <h2>{hero.subtitle}</h2>
+          <h2 className={styles.heroSubTitle}>{hero.subtitle}</h2>
           <img src="/images/transparent_flower.png" alt="" className={styles.flower} />
         </div>
       </section>
