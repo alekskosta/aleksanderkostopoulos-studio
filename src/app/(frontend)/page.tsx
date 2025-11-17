@@ -1,6 +1,5 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
-import React from 'react'
 
 import './styles.css'
 import HeroSection from '@/components/sections/HeroSection'
