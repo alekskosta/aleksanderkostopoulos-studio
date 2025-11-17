@@ -4,6 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
 
+export const metadata = {
+  title: 'Lab – Aleksander Kostopoulos',
+  description:
+    'Lab is a playground for audiovisual and creative coding experiments by Aleksander Kostopoulos – from TouchDesigner patches to React components.',
+}
+
 export default async function Lab() {
   const payload = await getPayload({ config })
   const queryResult = await payload.find({
@@ -14,12 +20,14 @@ export default async function Lab() {
 
   return (
     <section className={styles.lab}>
-      <h1 className={styles.labTitle}>Lab</h1>
-      <p className={styles.labText}>
-        A playground for ideas in motion. Here I publish experiments connecting rhythm, light, and
-        software: from quick sketches to working demos, from TouchDesigner patches to React
-        components. This is the backstage of my practice.
-      </p>
+      <div className={styles.labTitleContainer}>
+        <h1 className={styles.labTitle}>Lab</h1>
+        <p className={styles.labText}>
+          A playground for ideas in motion. Here I publish experiments connecting rhythm, light, and
+          software: from quick sketches to working demos, from TouchDesigner patches to React
+          components. This is the backstage of my practice.
+        </p>
+      </div>
       <div className={styles.labGrid}>
         {labs.map((lab) => (
           <article key={lab.id} className={styles.labArticle}>

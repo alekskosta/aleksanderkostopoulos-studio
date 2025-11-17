@@ -1,21 +1,47 @@
+'use client'
+
 import Link from 'next/link'
 import styles from './Header.module.css'
+import { Button } from '@payloadcms/ui'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
+  const [open, setOpen] = useState<boolean>(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    if (open) window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [open])
+
   return (
     <header className={styles.header}>
-      <img
-        src="/images/transparent_leafs.png"
-        alt="Shimmering flower"
-        className={styles.woodLeafs}
-      />
+      <img src="/images/transparent_leafs.png" alt="" className={styles.woodLeafs} />
       <p>
         <Link href="/" className={styles.brand}>
           Aleksander Kostopoulos
         </Link>
       </p>
       <nav aria-label="Hovedmeny">
-        <ul className="mainNav">
+        <Button
+          type="button"
+          className={styles.burger}
+          aria-label={open ? 'Lukk meny' : 'Åpne meny'}
+          aria-expanded={open}
+          onClick={() => setOpen((prev) => !prev)}
+          aria-controls="meny"
+        >
+          <span aria-hidden="true">{open ? 'X' : '☰'}</span>
+        </Button>
+        <ul className={`mainNav ${open ? styles.show : ''}`} id="meny">
           <li>
             <Link href="/about" className="navLink">
               About

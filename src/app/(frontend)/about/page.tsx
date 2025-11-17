@@ -1,8 +1,9 @@
 import AboutSection from '@/components/sections/AboutSection'
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  description:
+    'Learn more about creative technologist and audiovisual artist Aleksander Kostopoulos.',
+  title: 'About – Aleksander Kostopoulos',
 }
 
 export default function About() {

@@ -1,14 +1,21 @@
 .labSlugSection {
   border-bottom: 0.5px solid white;
   width: 100%;
-  min-height: 100vh;
   display: grid;
   place-items: center;
 }
 
-.labSlugTitle {
+.labSlugTitleContainer {
+  position: relative;
+  z-index: 100;
   text-align: center;
-  padding: 2.5rem;
+}
+
+.labSlugTitle {
+  text-decoration-line: underline;
+  text-decoration-color: #9b005c;
+  text-decoration-thickness: 4px;
+  padding-inline: 2.5rem;
 }
 
 .labSlugLink:hover {
@@ -23,31 +30,52 @@
   gap: 1.25rem;
   border-left: 0.5px solid white;
   border-right: 0.5px solid white;
+  width: 100%;
+  align-items: stretch;
+}
+
+.labSlugMedia,
+.labSlugContent {
+  flex: 1 1 50%;
+}
+
+.labSlugMedia {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-inline: 2.5rem;
+  aspect-ratio: 4 / 3;
 }
 
 .labSlugImage {
-  flex: 1 1 50%;
-  padding-bottom: 2.5rem;
-  padding-inline: 2.5rem;
   -webkit-mask-image: radial-gradient(ellipse at center, #000 5%, transparent 100%);
   mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 10% 90%;
   mask-size: 90% 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
+.labSlugContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .labSlugText {
-  flex: 1 1 50%;
   padding-bottom: 2.5rem;
   padding-inline: 2.5rem;
   border-left: 0.5px solid white;
+  width: 100%;
 }
 
 @media (max-width: 950px) {
   .labSlugArticle {
     flex-direction: column;
+  }
+
+  .labSlugMedia,
+  .labSlugContent {
+    flex: 1 1 auto;
   }
 }

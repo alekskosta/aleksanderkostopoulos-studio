@@ -19,6 +19,10 @@
   color: #9b005c;
 }
 
+.burger {
+  display: none;
+}
+
 .woodLeafs {
   position: absolute;
   left: 25%;
@@ -29,9 +33,35 @@
   filter: brightness(4);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1320px) {
   .woodLeafs {
     left: 10%;
     width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .show {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 2.5rem;
+    background-color: black;
+    color: var(--color-text);
+    z-index: 200;
+    border: 0.5px solid white;
+    width: 100%;
+    text-align: center;
   }
 }

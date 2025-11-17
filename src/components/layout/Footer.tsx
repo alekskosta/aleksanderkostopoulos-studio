@@ -13,7 +13,7 @@ export default function Footer() {
       <img src="/images/transparent_footer_flower.png" alt="" className={styles.footerFlowerLeft} />
       <article className={styles.footerText}>
         <h2>
-          <Link href="/" className={styles.footerLink}>
+          <Link href="/" className={styles.footerHome}>
             Home{' '}
           </Link>{' '}
         </h2>
@@ -24,7 +24,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open facebook.com"
-            className={styles.footerLink}
+            className={styles.icon}
           >
             <Image
               src="/images/icons/facebook-icon-cropped.png"
@@ -38,7 +38,7 @@ export default function Footer() {
           <Link
             href="mailto:aleksanderkostopoulos@gmail.com"
             aria-label="Send email to aleksanderkostopoulos@gmail.com"
-            className={styles.footerLink}
+            className={styles.icon}
           >
             <Image
               src="/images/icons/gmail-icon-cropped.png"
@@ -54,7 +54,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open instagram.com"
-            className={styles.footerLink}
+            className={styles.icon}
           >
             <Image
               src="/images/icons/instagram-icon-cropped.png"
@@ -70,7 +70,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open spotify"
-            className={styles.footerLink}
+            className={styles.icon}
           >
             <Image
               src="/images/icons/spotify-icon-cropped.png"
@@ -86,7 +86,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open youtube.com"
-            className={styles.footerLink}
+            className={styles.icon}
           >
             <Image
               src="/images/icons/youtube-icon-cropped.png"
@@ -98,20 +98,20 @@ export default function Footer() {
           </Link>
         </div>
 
-        <nav aria-label="Hovedmeny">
-          <ul className="mainNav">
+        <nav aria-label="Footermeny">
+          <ul className={styles.footerNav}>
             <li>
-              <Link href="/about" className="navLink">
+              <Link href="/about" className={styles.footerLink}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="/#projectSection" className="navLink">
+              <Link href="/#projectSection" className={styles.footerLink}>
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/lab" className="navLink">
+              <Link href="/lab" className={styles.footerLink}>
                 Lab
               </Link>
             </li>
@@ -120,21 +120,21 @@ export default function Footer() {
                 href="https://github.com/alekskosta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="navLink"
+                className={styles.footerLink}
               >
                 Github
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="navLink">
+              <Link href="/contact" className={styles.footerLink}>
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
-        <small>Aleksander Kostopoulos</small>
+        <small className={styles.small}>Aleksander Kostopoulos</small>
         <hr className={styles.line} />
-        <small>© All rights reserved 2025</small>
+        <small className={styles.small}>© All rights reserved 2025</small>
       </article>
     </footer>
   )
