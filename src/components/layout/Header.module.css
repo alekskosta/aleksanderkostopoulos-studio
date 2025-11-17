@@ -33,7 +33,7 @@
   filter: brightness(4);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1320px) {
   .woodLeafs {
     left: 10%;
     width: 50%;

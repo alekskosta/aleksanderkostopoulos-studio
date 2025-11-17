@@ -92,13 +92,39 @@
 @media (max-width: 900px) {
   .heroSection {
     flex-direction: column;
-
     height: auto;
+    padding: 0 1.25rem;
+  }
+
+  .crystal {
+    right: 0;
+    opacity: 0.7;
   }
 
   .flower {
     top: 0;
     right: 0;
-    height: 50%;
+    height: 100%;
+  }
+
+  .rightHeroText {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .heroTitle {
+    position: relative;
+    z-index: 100;
+    max-width: 350px;
+    padding-block: 0.5rem;
+  }
+
+  .heroSubTitle {
+    max-width: 200px;
+    padding-block: 0.5rem;
+  }
+
+  .rightHeroText > h2 {
+    font-size: 1rem;
   }
 }

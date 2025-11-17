@@ -20,12 +20,14 @@ export default async function Lab() {
 
   return (
     <section className={styles.lab}>
-      <h1 className={styles.labTitle}>Lab</h1>
-      <p className={styles.labText}>
-        A playground for ideas in motion. Here I publish experiments connecting rhythm, light, and
-        software: from quick sketches to working demos, from TouchDesigner patches to React
-        components. This is the backstage of my practice.
-      </p>
+      <div className={styles.labTitleContainer}>
+        <h1 className={styles.labTitle}>Lab</h1>
+        <p className={styles.labText}>
+          A playground for ideas in motion. Here I publish experiments connecting rhythm, light, and
+          software: from quick sketches to working demos, from TouchDesigner patches to React
+          components. This is the backstage of my practice.
+        </p>
+      </div>
       <div className={styles.labGrid}>
         {labs.map((lab) => (
           <article key={lab.id} className={styles.labArticle}>

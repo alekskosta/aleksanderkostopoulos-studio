@@ -12,6 +12,9 @@
 .welcomeTitle {
   flex: 1 1 50%;
   padding-right: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcomeText {
@@ -22,6 +25,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.welcomeText p {
+  margin: 0;
+  width: 100%;
 }
 
 .welcomeLink:hover {
@@ -51,4 +58,40 @@
   top: 0;
   height: 20%;
   rotate: 180deg;
+}
+
+@media (max-width: 900px) {
+  .welcomeSection {
+    flex-direction: column;
+    width: 100%;
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+    padding: 0 2.5rem;
+    margin: 0;
+    min-height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .welcomeTitle {
+    padding-block: 1.25rem;
+  }
+
+  .welcomeText {
+    border: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .welcomeText > p {
+    padding: 0;
+    padding-bottom: 2.5rem;
+    margin: 0;
+  }
+
+  .rock,
+  .rockTwo {
+    display: none;
+  }
 }
